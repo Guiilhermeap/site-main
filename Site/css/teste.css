@@ -1,0 +1,183 @@
+
+	*{
+		margin: 20;
+		padding: 20;
+        box-sizing: border-box;
+        font-family: Verdana;
+        color: #780303;
+        border: none;
+	}
+
+	body{
+		background-color: #ddd;
+		font-family: Verdana;
+	}
+
+	.nav_tabs{
+		width: 500px;
+		height: 400px;
+		margin: auto;
+		background-color: #DDE4E7;
+		position: relative;
+        border-radius: 10px;
+
+	}
+
+	.nav_tabs ul{
+		list-style: none;
+	}
+
+	.nav_tabs ul li{
+		float: left;
+	}
+
+	.tab_label{
+		display: block;
+		width: auto;
+		background-color: #363b48;
+		padding: 25px;
+		font-size: 18px;
+		color:#fff;
+		cursor: pointer;
+		text-align: center;
+	}
+
+
+	.nav_tabs .rd_tab { 
+	display:none;
+	position: absolute;
+}
+
+.nav_tabs .rd_tab:checked ~ label { 
+	background-color: #780303;
+	color:#fff;}
+
+.tab-content{
+	border-top: solid 5px #780303;
+	background-color: #fff;
+	display: none;
+	position: absolute;
+	margin-left: auto;
+    margin-right: auto;
+	width: 500px;
+	left: 0;	
+}
+
+.rd_tab:checked ~ .tab-content{
+	display: block;
+}
+.tab-content h2{
+	padding: 30px;
+	color: #87d3b7;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #780303;
+    border: none;
+  }
+  
+  input, label {
+    display: block;
+    outline: none;
+    width: 100%;
+  }
+  
+  a {
+    color: #780303;
+  }
+  
+  body {
+    padding-top: 8vh;
+    background-image: url('../img/bg-register-page.jpg');
+    background-size: cover;
+    background-position-y: -150px;
+  }
+  
+  /* form */
+  #main-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(221, 228, 231);
+    border-radius: 10px;
+    padding: 45px;
+  }
+  
+  #main-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #780303;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .full-box {
+    flex: 1 1 100%;
+    position: relative;
+  }
+  
+  .half-box {
+    flex: 1 1 45%;
+    position: relative;
+  }
+  
+  .spacing {
+    margin-right: 2.5%;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: .8rem;
+  }
+  
+  input {
+    border-bottom: 2px solid #323232;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+  }
+  
+  input:focus {
+    border-color: #780303;
+  }
+  
+  input[type="submit"] {
+    background-color: #780303;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  #agreement {
+    margin-right: 5px;
+  }
+  
+  #agreement, #agreement-label {
+    display: inline-block;
+    width: auto;
+  }
+  
+  .error-validation {
+    color: #ff1a1a;
+    position: absolute;
+    top: 57px;
+    font-size: 12px;
+  }
+  
+  .template {
+    display: none;
+  }
