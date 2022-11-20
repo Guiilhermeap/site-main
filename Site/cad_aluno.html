@@ -74,38 +74,31 @@ if (isset($_POST['submit'])) {
         <input type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço" data-min-length="11"
           data-max-length="11" data-required>
       </div>
+      <p>CURSOS</p>
+      <label class="ls-label col-md 2" for="curso">Gestão de T.I</label>
+      <input class="curso" type="radio" id="gti" name="curso" value="GTI" required>
+      <br>
+      <label class="ls-label col-md 2" for="curso">Gestão Comercial</label>
+      <input class="curso" type="radio" id="gcom" name="curso" value="GCOM" required>
+      <br>
+      <label class="ls-label col-md 2" for="curso">Secretariado</label>
+      <input class="curso" type="radio" id="sc" name="curso" value="SC" required>
+      <br>
+      <label class="ls-label col-md 2" for="curso">Gestão Empresarial - EAD</label>
+      <input class="curso" type="radio" id="gemp" name="curso" value="GEMP" required>
 
-      <div>
-        <p>CURSOS</p>
-        <label class="ls-label col-md 2" for="curso">Gestão de T.I</label>
-        <input type="radio" id="gti" name="curso" value="GTI" required>
-        <br>
-        <label class="ls-label col-md 2" for="curso">Gestão Comercial</label>
-        <input type="radio" id="gcom" name="curso" value="GCOM" required>
-        <br>
-        <label class="ls-label col-md 2" for="curso">Secretariado</label>
-        <input type="radio" id="sc" name="curso" value="SC" required>
-        <br>
-        <label class="ls-label col-md 2" for="curso">Gestão Empresarial - EAD</label>
-        <input type="radio" id="gemp" name="curso" value="GEMP" required>
-        <br>
-      </div>
-
-      <div>
-        <p>PERIODO</p>
-        <label class="ls-label col-md 2" for="curso">Matutino</label>
-        <input type="radio" id="matutino" name="periodo" value="MATUTINO" required>
-        <br>
-        <label class="ls-label col-md 2" for="curso">Vespertino</label>
-        <input type="radio" id="vespertino" name="periodo" value="VESPERTINO" required>
-        <br>
-        <label class="ls-label col-md 2" for="curso">Noturno</label>
-        <input type="radio" id="noturno" name="periodo" value="NOTURNO" required>
-        <br>
-        <label class="ls-label col-md 2" for="curso">EAD</label>
-        <input type="radio" id="ead" name="periodo" value="EAD" required>
-        <br>
-      </div>
+      <p>PERIODO</p>
+      <input class="periodo" type="radio" id="matutino" name="periodo" value="MATUTINO" required>
+      <label class="ls-label col-md 2" for="curso">Matutino</label>
+      <br>
+      <input class="periodo" type="radio" id="vespertino" name="periodo" value="VESPERTINO" required>
+      <label class="ls-label col-md 2" for="curso">Vespertino</label>
+      <br>
+      <input class="periodo" type="radio" id="noturno" name="periodo" value="NOTURNO" required>
+      <label class="ls-label col-md 2" for="curso">Noturno</label>
+      <br>
+      <input class="periodo" type="radio" id="ead" name="periodo" value="EAD" required>
+      <label class="ls-label col-md 2" for="curso">EAD</label>
 
       <br><br><br><br>
       <div class="full-box">
