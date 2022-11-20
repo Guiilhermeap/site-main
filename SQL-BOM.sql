@@ -1,25 +1,26 @@
-CREATE DATABASE TRABALHO01;
-use TRABALHO01;
+CREATE DATABASE TRABALHO_ES;
+use TRABALHO_ES;
 
 CREATE TABLE Aluno (
 	Id integer not null auto_increment,
 	RA varchar (13) not null,
+    CPF varchar (11) not null,
     senha varchar (8) not null,
 	nome varchar (50) not null,
 	email varchar (50) not null,
-	telefone varchar (30),
+	telefone varchar (11),
 	endereco varchar (50),
 	dt_matricula date,
 	curso varchar (50) not null,
 	periodo varchar (10),
     
-    CONSTRAINT Pk_id PRIMARY KEY (Id)
+    CONSTRAINT IdAluno PRIMARY KEY (Id)
 );
 
 CREATE TABLE Curriculo (
 	Id integer not null auto_increment,
     Id_aluno integer,
-	resumo varchar (120) not null,
+	resumo varchar (300) not null,
     certificacao varchar (50) not null,
 	nome varchar (50) not null,
 	email varchar (50) not null,
@@ -33,7 +34,7 @@ CREATE TABLE Curriculo (
     habilidades varchar (300),
 	periodo varchar (10),
     
-    CONSTRAINT Pk_id PRIMARY KEY (Id),
+    CONSTRAINT IdCurriculo PRIMARY KEY (Id),
     constraint Fk_cv_aluno foreign key (Id_aluno) references Aluno (Id)
 );
 
@@ -52,7 +53,7 @@ CREATE TABLE Empresa (
 	endereco varchar (50) not null,
 	area_atuacao varchar (100) not null,
     
-    CONSTRAINT Pk_id PRIMARY KEY (Id)
+    CONSTRAINT IdEmpresa PRIMARY KEY (Id)
 );
 
 Create table Acesso_curriculo (
@@ -74,7 +75,7 @@ CREATE TABLE Publicacao (
 	vaga varchar (30) not null,
 	status_pubicacao  varchar (50),
     
-    CONSTRAINT Pk_autor PRIMARY KEY (Autor)
+    CONSTRAINT IdPublicacao PRIMARY KEY (Autor)
 );
 
 Create table Item_publicacao (
@@ -87,4 +88,3 @@ Create table Item_publicacao (
     constraint Fk_itpublicacao_autor foreign key (Id_autor) references Publicacao (Autor)
 );
 
-alter table Aluno add column CPF varchar (11) not null;

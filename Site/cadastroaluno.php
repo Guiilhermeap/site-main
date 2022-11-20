@@ -1,5 +1,5 @@
-<?php
 
+<!-- 
     include_once('conexao.php');
     
     $nome_aluno=$_POST['nome_aluno'];
@@ -9,4 +9,4 @@
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':nome',$nome);
     $stmt->bindParam(':email',$email);
-    $stmt->execute();
+    $stmt->execute(); -->
