@@ -194,31 +194,3 @@ submit.addEventListener('click', function (e) {
 
   validator.validate(form);
 });
-
-//Cadastrar novo usuário no bd
-
-'use strict';
-
-const myForm = document.getElementById("register-form");
-myForm.addEventListener('submit',gravar);
-
-function gravar(e){
-    e.preventDefault();
-    const formData = new FormData(this);
-    const searchParams = new URLSearchParams();
-
-    for(const par of formData){
-        searchParams.append(par[0],par[1]);
-    }
-
-    fetch('cadastrodealuno.php',{
-        method:'POST',
-        body:formData
-    }).then(function(response){
-        document.getElementById('nome').value=" ";
-        document.getElementById('email').value=" ";
-        return alert('Dados gravados com sucesso!');
-    }).catch(function(error){
-        console.log(error);
-    });
-}
