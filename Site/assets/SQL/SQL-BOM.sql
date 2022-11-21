@@ -88,3 +88,30 @@ Create table Item_publicacao (
     constraint Fk_itpublicacao_autor foreign key (Id_autor) references Publicacao (Autor)
 );
 
+CREATE TABLE Administrador (
+	Id integer not null auto_increment,
+    CPF varchar (11) not null,
+    senha varchar (8) not null,
+	nome varchar (50) not null,
+	email varchar (50) not null,
+	telefone varchar (11),
+	endereco varchar (50),
+	cargo varchar (50) not null,
+    
+    CONSTRAINT IdAdmin PRIMARY KEY (Id)
+);
+
+CREATE TABLE Empresas (
+	Id integer not null auto_increment,
+	CNPJ varchar (20) not null,
+    senha varchar (8) not null,
+	nome varchar (50) not null,
+	email varchar (50) not null,
+	telefone varchar (30),
+	endereco varchar (50) not null,
+	area_atuacao varchar (100) not null,
+    
+    CONSTRAINT PRIMARY KEY (Id)
+);
+
+select * from trabalho_es .empresas;
