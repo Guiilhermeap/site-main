@@ -184,7 +184,7 @@ class Validator {
 }
 
 let form = document.getElementById('register-form');
-let submit = document.getElementById('btn-submit');
+let submit = document.getElementById('submit');
 
 let validator = new Validator();
 

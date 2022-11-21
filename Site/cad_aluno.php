@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 if (isset($_POST['submit'])) {
 
@@ -17,9 +17,8 @@ if (isset($_POST['submit'])) {
 
   $result = mysqli_query($conexao, "INSERT INTO aluno (RA,CPF,senha,nome,email,telefone,endereco,dt_matricula,curso,periodo)
   VALUES ('$RA','$CPF','$senha','$nome','$email','$telefone','$endereco','$dt_matricula', '$curso', '$periodo')");
-
 }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,39 +40,34 @@ if (isset($_POST['submit'])) {
 
       <div class="full-box">
         <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2"
-          data-email-validate>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
       </div>
 
       <div class="full-box">
         <label for="name">Nome Completo</label>
-        <input type="text" name="nome" id="name" placeholder="Digite seu nome completo" data-required
-          data-min-length="3" data-max-length="40">
+        <input type="text" name="nome" id="name" placeholder="Digite seu nome completo" data-required data-min-length="3" data-max-length="40">
       </div>
 
       <div class="half-box spacing">
         <label for="ra">R.A.</label>
-        <input type="text" name="ra" id="ra" placeholder="Digite seu ra" data-required data-only-letters
-          data-min-length="13" data-max-length="13" data-required>
+        <input type="text" name="ra" id="ra" placeholder="Digite seu ra" data-required data-only-letters data-min-length="13" data-max-length="13" data-required>
       </div>
 
       <div class="half-box spacing">
         <label for="cpf">CPF</label>
-        <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" data-min-length="11" data-max-length="11"
-          data-required>
+        <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" data-min-length="11" data-max-length="11" data-required>
       </div>
 
       <div class="full-box">
         <label for="phone">Telefone</label>
-        <input type="text" name="telefone" id="phone" placeholder="Digite seu telefone com DDD" data-min-length="11"
-          data-max-length="11" data-required>
+        <input type="text" name="telefone" id="phone" placeholder="Digite seu telefone com DDD" data-min-length="11" data-max-length="11" data-required>
       </div>
 
       <div class="full-box">
         <label for="endereco">Endereco</label>
-        <input type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço" data-min-length="11"
-          data-max-length="11" data-required>
+        <input type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço" data-min-length="11" data-max-length="11" data-required>
       </div>
+
       <p>CURSOS</p>
       <label class="ls-label col-md 2" for="curso">Gestão de T.I</label>
       <input class="curso" type="radio" id="gti" name="curso" value="GTI" required>
@@ -109,14 +103,12 @@ if (isset($_POST['submit'])) {
       <br><br><br>
       <div class="half-box spacing">
         <label for="lastname">Senha</label>
-        <input type="password" name="senha" id="password" placeholder="Digite sua senha" data-password-validate
-          data-required>
+        <input type="password" name="senha" id="password" placeholder="Digite sua senha" data-password-validate data-required>
       </div>
 
       <div class="half-box">
         <label for="passconfirmation">Confirmação de senha</label>
-        <input type="password" name="passconfirmation" id="passwordconfirmation"
-          placeholder="Digite novamente sua senha" data-equal="password">
+        <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha" data-equal="password">
       </div>
 
       <div>
@@ -136,7 +128,6 @@ if (isset($_POST['submit'])) {
     </form>
   </div>
   <p class="error-validation template"></p>
-
 
   <script src="js/scripts.js"></script>
 </body>
