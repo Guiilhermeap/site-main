@@ -32,7 +32,7 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li class="active"><a href="index.html">Home</a></li>
+				<li class="active"><a href="index.php">Home</a></li>
 				<li><a href="cad_aluno.php" target="_blank">Cadastro Aluno</a></li>
 				<li><a href="cad_empresa.php" target="_blank">Cadastro Empresa</a></li>
 			</ul>
