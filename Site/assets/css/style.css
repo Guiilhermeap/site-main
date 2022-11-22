@@ -7,7 +7,8 @@
   border: none;
 }
 
-input, label {
+input,
+label {
   display: block;
   outline: none;
   width: 100%;
@@ -37,6 +38,7 @@ body {
   margin-bottom: 25px;
   font-size: 1.6rem;
 }
+
 h4 {
   text-align: center;
   margin-bottom: 10px;
@@ -69,7 +71,7 @@ label {
   font-size: .8rem;
 }
 
-input {
+.site {
   border-bottom: 2px solid #323232;
   padding: 10px;
   font-size: .9rem;
@@ -93,7 +95,8 @@ input[type="submit"] {
   margin-right: 5px;
 }
 
-#agreement, #agreement-label {
+#agreement,
+#agreement-label {
   display: inline-block;
   width: auto;
 }
@@ -109,3 +112,45 @@ input[type="submit"] {
   display: none;
 }
 
+.form-group label {
+  padding-left: 10px;
+  padding-top: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+}
+
+.periodo {
+  appearance: none;
+  background: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 5px;
+  outline: none;
+  border: 1px solid black;
+}
+
+
+.input_curso {
+  appearance: none;
+  background: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 5px;
+  outline: none;
+  border: 1px solid black;
+}
+
+p {
+  text-align: center;
+}
+
+.wrapper{
+  width: 100%;
+  padding-bottom: 20px;
+}
