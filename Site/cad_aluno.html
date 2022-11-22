@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 if (isset($_POST['submit'])) {
 
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
   $result = mysqli_query($conexao, "INSERT INTO aluno (RA,CPF,senha,nome,email,telefone,endereco,dt_matricula,curso,periodo)
   VALUES ('$RA','$CPF','$senha','$nome','$email','$telefone','$endereco','$dt_matricula', '$curso', '$periodo')");
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
     <h4> FATEC ITAQUAQUECETUBA </h4>
     <h1>Cadastre-se para acessar o sistema</h1>
 
-    <form id="register-form" action="cad_aluno.php" method="POST">
+    <form id="form" action="cad_aluno.php" method="POST">
 
       <div class="full-box">
         <label for="email">E-mail</label>
@@ -129,7 +129,6 @@ if (isset($_POST['submit'])) {
   </div>
   <p class="error-validation template"></p>
 
-  <script src="js/scripts.js"></script>
 </body>
 
 </html>
