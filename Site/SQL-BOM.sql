@@ -68,7 +68,8 @@ CREATE TABLE Publicacao (
 	Autor integer not null auto_increment,
 	horario time,
     descricao varchar (300) not null,
-	data_publicacao date,
+	data_evento date,
+    data_curso date,
     evento varchar (200),
     curso varchar(50),
 	vaga varchar (30) not null,
@@ -100,5 +101,4 @@ CREATE TABLE Administrador (
     CONSTRAINT IdAdmin PRIMARY KEY (Id)
 );
 
-SELECT * FROM empresa WHERE CNPJ = '12324252627281' and senha = 'G1234';
 

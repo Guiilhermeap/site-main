@@ -1,40 +1,66 @@
 <?php
-    session_start();
-    // print_r($_REQUEST);
-    if(isset($_POST['submit']) && !empty($_POST['loginCnpj']) && !empty($_POST['senhaEmp']))
-    {
-        // Acessa
-        include_once('conexao.php');
-        $cnpj = $_POST['loginCnpj'];
-        $senha = $_POST['senhaEmp'];
+session_start();
+include_once('conexao.php');
 
-        // print_r('Email: ' . $email);
-        // print_r('<br>');
-        // print_r('Senha: ' . $senha);
+if (empty($_POST['cnpjEmp']) || empty($_POST['senhaEmp'])) {
+    header('Location: login_empresa.php');
+    exit();
+}
 
-        $sql = "SELECT * FROM empresa WHERE CNPJ = '$cnpj' and senha = '$senha'";
+$cnpjemp = mysqli_real_escape_string($conexao, $_POST['cnpjEmp']);
+$senhaemp = mysqli_real_escape_string($conexao, $_POST['senhaEmp']);
 
-        $result = $conexao->query($sql);
+$query = "SELECT cnpj, senha FROM empresa WHERE cnpj = '{$cnpjemp}' and senha = '{$senhaemp}'";
 
-        print_r($sql);
-        print_r($result);
+$result = mysqli_query($conexao, $query);
 
-        // if(mysqli_num_rows($result) < 1)
-        // {
-        //     unset($_SESSION['loginCnpj']);
-        //     unset($_SESSION['senhaEmp']);
-        //     header('Location: login_empresa.php');
-        // }
-        // else
-        // {
-        //     $_SESSION['loginCnpj'] = $cnpj;
-        //     $_SESSION['senhaEmp'] = $senha;
-        //     header('Location: painel.php');
-        // }
-    }
-    else
-    {
-        // Não acessa
-        header('Location: login_empresa.php');
-    }
-?>
+$row = mysqli_num_rows($result);
+
+if ($row == 1) {
+    $_SESSION['cnpjEmp'] = $cnpjemp;
+    header('Location: painel.php');
+    exit();
+} else {
+    $_SESSION['nao_autenticado'] = true;
+    header('Location: login_empresa.php');
+    exit();
+}
+
+
+    // session_start();
+    // // print_r($_REQUEST);
+    // if(isset($_POST['submit']) && !empty($_POST['loginCnpj']) && !empty($_POST['senhaEmp']))
+    // {
+    //     // Acessa
+    //     $cnpj = $_POST['loginCnpj'];
+    //     $senha = $_POST['senhaEmp'];
+
+    //     // print_r('Email: ' . $email);
+    //     // print_r('<br>');
+    //     // print_r('Senha: ' . $senha);
+
+    //     $sql = "SELECT * FROM empresa WHERE CNPJ = '$cnpj' and senha = '$senha'";
+
+    //     $result = $conexao->query($sql);
+
+    //     print_r($sql);
+    //     print_r($result);
+
+    //     // if(mysqli_num_rows($result) < 1)
+    //     // {
+    //     //     unset($_SESSION['loginCnpj']);
+    //     //     unset($_SESSION['senhaEmp']);
+    //     //     header('Location: login_empresa.php');
+    //     // }
+    //     // else
+    //     // {
+    //     //     $_SESSION['loginCnpj'] = $cnpj;
+    //     //     $_SESSION['senhaEmp'] = $senha;
+    //     //     header('Location: painel.php');
+    //     // }
+    // }
+    // else
+    // {
+    //     // Não acessa
+    //     header('Location: login_empresa.php');
+    // }

@@ -1,17 +1,11 @@
 <?php
-    session_start();
-    include_once('conexao.php');
-    // print_r($_SESSION);
-    if((!isset($_SESSION['loginCnpj']) == true) and (!isset($_SESSION['senhaEmp']) == true))
-    {
-        unset($_SESSION['loginCnpj']);
-        unset($_SESSION['senhaEmp']);
-        header('Location: login_empresa.php');
-    }
-    $logado = $_SESSION['loginCnpj'];
+include('verifica_login.php');
 ?>
+<h2>Olá, <?php echo $_SESSION['usuario']; ?></h2>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,13 +13,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>SISTEMA</title>
     <style>
-        body{
+        body {
             background: #500000;
             color: white;
             text-align: center;
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
@@ -43,4 +38,5 @@
 <script>
 
 </script>
+
 </html>
