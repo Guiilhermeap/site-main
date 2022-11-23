@@ -78,10 +78,6 @@ label {
   margin-bottom: 40px;
 }
 
-input:focus {
-  border-color: #780303;
-}
-
 input[type="submit"] {
   background-color: #780303;
   color: #FFF;
@@ -115,7 +111,6 @@ input[type="submit"] {
 .form-group label {
   padding-left: 10px;
   padding-top: 4px;
-  cursor: pointer;
   width: 100%;
 }
 
@@ -124,33 +119,79 @@ input[type="submit"] {
 }
 
 .periodo {
+  cursor: pointer;
   appearance: none;
   background: #fff;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   margin: 5px;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 .input_curso {
+  cursor: pointer;
   appearance: none;
   background: #fff;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   margin: 5px;
   outline: none;
-  border: 1px solid black;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
   text-align: center;
 }
 
-.wrapper{
+.wrapper {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
+}
+
+.periodo::before {
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background: #780303;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.periodo:checked:before {
+  opacity: 1;
+}
+
+.input_curso::before {
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background: #780303;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.input_curso:checked:before {
+  opacity: 1;
+}
+
+.site:invalid {
+  border-color: red;
+}
+
+.site:valid {
+  border-color: rgb(6, 146, 15);
 }

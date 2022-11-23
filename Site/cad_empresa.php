@@ -38,47 +38,47 @@ if (isset($_POST['submit'])) {
 
       <div class="full-box">
         <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
+        <input class="site" type="email" name="email" id="email" required placeholder="Digite seu e-mail" data-min-length="3" data-max-length="30" data-email-validate>
       </div>
 
       <div class="full-box">
         <label for="name">Nome da Empresa</label>
-        <input type="text" name="nome" id="name" placeholder="Digite seu nome completo" data-required data-min-length="3" data-max-length="40">
+        <input class="site" type="text" name="nome" id="name" required placeholder="Digite seu nome completo"data-min-length="3" data-max-length="40">
       </div>
 
       <div class="half-box spacing">
         <label for="cpf">CNPJ</label>
-        <input type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ " data-min-length="10" data-max-length="50" data-required>
+        <input class="site" type="text" name="cnpj" id="cnpj" placeholder="Digite o CNPJ " data-min-length="10" data-max-length="50" required>
       </div>
 
       <div class="half-box spacing">
         <label for="phone">Telefone</label>
-        <input type="text" name="telefone" id="phone" placeholder="Digite o telefone" data-min-length="11" data-max-length="30" data-required>
+        <input class="site" type="text" name="telefone" id="phone" placeholder="Digite o telefone" data-min-length="11" data-max-length="30" required>
       </div>
 
       <div class="half-box spacing">
         <label for="lastname">Area de Atuação</label>
-        <input type="text" name="atuacao" id="atuacao" placeholder="Digite a Area de Atuação" data-min-length="10" data-max-length="50" data-required>
+        <input class="site" type="text" name="atuacao" id="atuacao" placeholder="Digite a Area de Atuação" data-min-length="10" data-max-length="50" required>
       </div>
 
       <div class="full-box">
         <label for="endereco">Endereco</label>
-        <input type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço" data-min-length="10" data-max-length="50" data-required>
+        <input class="site" type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço" data-min-length="10" data-max-length="50" required>
       </div>
 
       <div class="half-box spacing">
         <label for="lastname">Senha</label>
-        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" data-password-validate data-required>
+        <input class="site" type="password" name="senha" id="senha" placeholder="Digite sua senha" data-password-validate required>
       </div>
 
       <div class="half-box">
         <label for="passconfirmation">Confirmação de senha</label>
-        <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha" data-equal="password">
+        <input class="site" type="password" name="passconfirmation" id="passwordconfirmation" required placeholder="Digite novamente sua senha" data-equal="password">
       </div>
 
       <div>
-        <input type="checkbox" name="agreement" id="agreement">
-        <label for="agreement" id="agreement-label">Eu li e aceito os <a href="#">termos de uso</a></label>
+        <input class="site" type="checkbox" name="agreement" id="agreement">
+        <label  for="agreement" id="agreement-label">Eu li e aceito os <a href="#">termos de uso</a></label>
       </div>
 
       <div>
@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
       </div>
 
       <div class="full-box">
-        <input type="submit" name="submit" id="submit" value="Cadastrar">
+        <input class="site" type="submit" name="submit" id="submit" value="Cadastrar" required>
       </div>
 
     </form>

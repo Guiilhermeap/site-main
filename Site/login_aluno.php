@@ -15,12 +15,12 @@
     <form id="login-form" action="">
       <div class="full-box">
         <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
+        <input class="site" type="email" name="email" id="email" required placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
       </div>
       <br><br><br>
       <div class="full-box">
         <label for="lastname">Senha</label>
-        <input type="password" name="password" id="password" placeholder="Digite sua senha" data-password-validate data-required>
+        <input class="site" type="password" name="password" id="password" required placeholder="Digite sua senha" data-password-validate data-required>
       </div>
       <a href="#">Esqueci minha senha
       </a>
@@ -30,7 +30,7 @@
         </a> 
       </div>
       <div class="full-box">
-        <input id="btn-submit" type="submit" value="Login">
+        <input class="site" id="btn-submit" type="submit" value="Login">
       </div>
     </form>
   </div>

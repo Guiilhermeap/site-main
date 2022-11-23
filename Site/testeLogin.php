@@ -18,7 +18,7 @@ $row = mysqli_num_rows($result);
 
 if ($row == 1) {
     $_SESSION['cnpjEmp'] = $cnpjemp;
-    header('Location: painel.php');
+    header('Location: Area_empresa.php');
     exit();
 } else {
     $_SESSION['nao_autenticado'] = true;

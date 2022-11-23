@@ -40,38 +40,36 @@ if (isset($_POST['submit'])) {
 
       <div class="full-box">
         <label for="email">E-mail</label>
-        <input class="site" type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2"
+        <input class="site" type="email" name="email" id="email" required placeholder="Digite seu e-mail" data-min-length="3" data-max-length="30"
           data-email-validate>
       </div>
 
       <div class="full-box">
         <label for="name">Nome Completo</label>
-        <input class="site" type="text" name="nome" id="name" placeholder="Digite seu nome completo" data-required
-          data-min-length="3" data-max-length="40">
+        <input class="site" type="text" name="nome" id="name" required placeholder="Digite seu nome completo" data-min-length="3" data-max-length="40">
       </div>
 
       <div class="half-box spacing">
         <label for="ra">R.A.</label>
-        <input class="site" type="text" name="ra" id="ra" placeholder="Digite seu ra" data-required data-only-letters
-          data-min-length="13" data-max-length="13" data-required>
+        <input class="site" type="text" name="ra" id="ra" required placeholder="Digite seu ra" data-only-letters data-min-length="13" data-max-length="13">
       </div>
 
       <div class="half-box spacing">
         <label for="cpf">CPF</label>
-        <input class="site" type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" data-min-length="11"
-          data-max-length="11" data-required>
+        <input class="site" type="text" name="cpf" id="cpf" required placeholder="Digite seu CPF" data-min-length="11"
+          data-max-length="11">
       </div>
 
       <div class="full-box">
         <label for="phone">Telefone</label>
-        <input class="site" type="text" name="telefone" id="phone" placeholder="Digite seu telefone com DDD"
-          data-min-length="11" data-max-length="11" data-required>
+        <input class="site" type="text" name="telefone" id="phone" required placeholder="Digite seu telefone com DDD"
+          data-min-length="11" data-max-length="11">
       </div>
 
       <div class="full-box">
         <label for="endereco">Endereco</label>
-        <input class="site" type="text" name="endereco" id="endereco" placeholder="Digite seu Endereço"
-          data-min-length="11" data-max-length="11" data-required>
+        <input class="site" type="text" name="endereco" id="endereco" required placeholder="Digite seu Endereço"
+          data-min-length="11" data-max-length="11">
       </div>
 
       <div class="wrapper">
@@ -124,7 +122,7 @@ if (isset($_POST['submit'])) {
       <br><br><br><br>
       <div class="full-box">
         <label for="datainclusao">Data da Matrícula</label>
-        <input class="site" type="date" name="dt_matricula" id="datematricula">
+        <input class="site" type="date" name="dt_matricula" id="datematricula" required>
       </div>
 
 
@@ -132,13 +130,12 @@ if (isset($_POST['submit'])) {
       <div class="half-box spacing">
         <label for="lastname">Senha</label>
         <input class="site" type="password" name="senha" id="password" placeholder="Digite sua senha"
-          data-password-validate data-required>
+          data-password-validate required>
       </div>
 
       <div class="half-box">
         <label for="passconfirmation">Confirmação de senha</label>
-        <input class="site" type="password" name="passconfirmation" id="passwordconfirmation"
-          placeholder="Digite novamente sua senha" data-equal="password">
+        <input class="site" type="password" name="passconfirmation" id="passwordconfirmation" required placeholder="Digite novamente sua senha" data-equal="password">
       </div>
 
       <div>
@@ -147,7 +144,7 @@ if (isset($_POST['submit'])) {
       </div>
 
       <div>
-        <a href="login_aluno.html">Já está cadastrado?
+        <a href="login_aluno.php">Já está cadastrado?
         </a></label>
       </div>
 
@@ -159,6 +156,7 @@ if (isset($_POST['submit'])) {
   </div>
   <p class="error-validation template"></p>
 
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
