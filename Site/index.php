@@ -35,6 +35,7 @@
 				<li class="active"><a href="index.php">Home</a></li>
 				<li><a href="cad_aluno.php" target="_blank">Cadastro Aluno</a></li>
 				<li><a href="cad_empresa.php" target="_blank">Cadastro Empresa</a></li>
+				<li><a href="cad_adm.php" target="_blank">Cadastro Administrador</a></li>
 			</ul>
 			<ul class="icons">
 				<li><a href="https://www.facebook.com/fatecitaquaquecetuba" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
