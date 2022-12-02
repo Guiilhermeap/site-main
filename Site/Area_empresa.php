@@ -15,7 +15,7 @@ include('verifica_login.php');
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Main Styling -->
-  <link href="assets/css/corriculo.css" rel="stylesheet" />
+  <link href="assets/css/curriculo.css" rel="stylesheet" />
 
 </head>
 
