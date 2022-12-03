@@ -66,18 +66,13 @@ Create table Acesso_curriculo (
 
 CREATE TABLE Publicacao (
 	Autor integer not null auto_increment,
-	horario time,
     descricao varchar (300) not null,
-	data_evento date,
-    data_curso date,
-    evento varchar (200),
-    curso varchar(50),
-	vaga varchar (30) not null,
-	status_pubicacao  varchar (50),
-    
+    tipoPubli varchar (10) not null,
+    dataPubli date not null,
+
     CONSTRAINT IdPublicacao PRIMARY KEY (Autor)
 );
-
+ 
 Create table Item_publicacao (
 	Id_aluno integer,
     Id_empresa integer,
@@ -101,4 +96,7 @@ CREATE TABLE Administrador (
     CONSTRAINT IdAdmin PRIMARY KEY (Id)
 );
 
+
+    
+select * from trabalho_es.administrador;
 
