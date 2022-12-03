@@ -18,7 +18,7 @@ $row = mysqli_num_rows($result);
 
 if ($row == 1) {
     $_SESSION['emailAdm'] = $emailadm;
-    header('Location: areaAdm.php');
+    header('Location: timeline.php');
     exit();
 } else {
     $_SESSION['nao_autenticado'] = true;

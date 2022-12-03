@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 if (isset($_POST['submit'])) {
 
@@ -15,10 +15,10 @@ if (isset($_POST['submit'])) {
   $curso = $_POST['curso'];
   $periodo = $_POST['periodo'];
 
-  $result = mysqli_query($conexao, "INSERT INTO aluno (RA,CPF,senha,nome,email,telefone,endereco,dt_matricula,curso,periodo)
+  $result = mysqli_query($conexao, "INSERT INTO aluno(RA,CPF,senha,nome,email,telefone,endereco,dt_matricula,curso,periodo)
   VALUES ('$RA','$CPF','$senha','$nome','$email','$telefone','$endereco','$dt_matricula', '$curso', '$periodo')");
 }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -156,7 +156,6 @@ if (isset($_POST['submit'])) {
   </div>
   <p class="error-validation template"></p>
 
-  <script src="js/scripts.js"></script>
 </body>
 
 </html>
