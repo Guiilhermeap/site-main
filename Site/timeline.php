@@ -10,7 +10,9 @@ if (isset($_POST['submit'])) {
 
     $result = mysqli_query($conexao, "INSERT INTO publicacao(descricao,tipoPubli,dataPubli)
     VALUES ('$txtPubli','$publicacao','$dataPublicacao')");
+
 }
+
 
 ?>
 
@@ -164,6 +166,7 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="flex-auto px-0 pt-0 pb-2">
                                 <div class="p-0 overflow-x-auto">
+                                    <input type="hidden" name="teste">
                                     <div class="col-11">
                                         <textarea required id="text-area" name="textPubli" class="text-area w-100" type="text" placeholder="Digite aqui as informações" rows="5" cols="50"></textarea>
                                     </div>
@@ -176,8 +179,14 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                 </div>
+                <p>
+                    <?php
+                        echo $txtPubli;
+                    ?>
+                </p>
             </form>
         </div>
+
     </main>
 
 

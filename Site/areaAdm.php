@@ -1,22 +1,19 @@
-<!-- <?php
-// include('verifica_loginAdm.php');
+<?php
+include('verifica_loginAdm.php');
 
-// include_once('conexao.php');
+include_once('conexao.php');
 
-// if (isset($_GET['textPubli'])) {
-//     $textPublicacao = mysqli_real_escape_string($conexao, $_GET['textPubli']);
+if (isset($_GET['textPubli'])) {
+    $textPublicacao = mysqli_real_escape_string($conexao, $_GET['textPubli']);
 
-//     $query = "SELECT * FROM publicacao WHERE descricao='$textPublicacao' ";
-//     $query_run = mysqli_query($conexao, $query);
+    $query = "SELECT * FROM publicacao WHERE descricao='$textPublicacao' ";
+    $query_run = mysqli_query($conexao, $query);
 
-//     if (mysqli_num_rows($query_run) > 0) {
-//         $descricao = mysqli_fetch_array($query_run);
+    if (mysqli_num_rows($query_run) > 0) {
+        $descricao = mysqli_fetch_array($query_run);
 
-//     %query2 = "SELECT p.autor FROM publicacao AS p
-//     INNER JOIN descricao"
-
-// }}
-?> -->
+}}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
