@@ -4,7 +4,6 @@ use TRABALHO_ES;
 CREATE TABLE Aluno (
 	Id integer not null auto_increment,
 	RA varchar (13) not null,
-    CPF varchar (11) not null,
     senha varchar (8) not null,
 	nome varchar (50) not null,
 	email varchar (50) not null,
@@ -95,8 +94,3 @@ CREATE TABLE Administrador (
     
     CONSTRAINT IdAdmin PRIMARY KEY (Id)
 );
-
-
-    
-select * from trabalho_es.administrador;
-
