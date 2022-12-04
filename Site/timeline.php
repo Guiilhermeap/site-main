@@ -179,11 +179,13 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                 </div>
-                <p>
+                <h1>
                     <?php
-                        echo $txtPubli;
+                        echo "DESCRIÇÂO VAGA !";
+                        echo "\n $txtPubli";
                     ?>
-                </p>
+                </h1>
+
             </form>
         </div>
 
@@ -191,5 +193,4 @@ if (isset($_POST['submit'])) {
 
 
 </body>
-
 </html>
